@@ -12,11 +12,14 @@ public class StateManager : MonoBehaviour
 
 	[Header("Variables")]
 	[SerializeField] PostProcessVolume postProcessVolume;
+    [SerializeField] GameObject skeleton;
 	[SerializeField] GameObject presentObjectsParent;
 	[SerializeField] GameObject pastObjectsParent;
 
 	List<GameObject> presentObjects = new List<GameObject>();
 	List<GameObject> pastObjects = new List<GameObject>();
+
+    GameObject currentSkeleton;
 
     private void OnEnable()
     {
@@ -32,15 +35,8 @@ public class StateManager : MonoBehaviour
 
     private void Awake()
 	{
-		foreach (Transform child in presentObjectsParent.transform)
-		{
-			presentObjects.Add(child.gameObject);
-		}
-
-		foreach (Transform child in pastObjectsParent.transform)
-		{
-			pastObjects.Add(child.gameObject);
-		}
+        //currentSkeleton = GameObject.Find("Skeleton");
+        CreateLists();
 	}
 
     private void Start()
@@ -48,11 +44,18 @@ public class StateManager : MonoBehaviour
         LoadState();
     }
 
-    private void Update()
-	{
-        //SwitchState();
-	}
+    private void CreateLists()
+    {
+        foreach (Transform child in presentObjectsParent.transform)
+        {
+            presentObjects.Add(child.gameObject);
+        }
 
+        foreach (Transform child in pastObjectsParent.transform)
+        {
+            pastObjects.Add(child.gameObject);
+        }
+    }
 	public void SwitchState()
 	{
         if (currentState == State.present)
@@ -70,6 +73,7 @@ public class StateManager : MonoBehaviour
         {
             // mustavalkoinen pois p‰‰lt‰
             postProcessVolume.enabled = false;
+            SpawnSkeleton();
             foreach (GameObject presentObject in presentObjects)
             {
                 presentObject.SetActive(true);
@@ -83,6 +87,7 @@ public class StateManager : MonoBehaviour
         {
             //mustavalkoinen p‰‰lles
             postProcessVolume.enabled = true;
+            Destroy(currentSkeleton);
             foreach (GameObject presentObject in presentObjects)
             {
                 presentObject.SetActive(false);
@@ -92,5 +97,10 @@ public class StateManager : MonoBehaviour
                 pastObject.SetActive(true);
             }
         }
+    }
+    private void SpawnSkeleton()
+    {
+        GameObject newSkeleton = Instantiate(skeleton);
+        currentSkeleton = newSkeleton;
     }
 }
