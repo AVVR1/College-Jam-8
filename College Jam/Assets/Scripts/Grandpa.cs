@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Grandpa : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Grandpa : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
