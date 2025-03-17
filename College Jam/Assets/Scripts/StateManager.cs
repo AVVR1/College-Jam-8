@@ -14,10 +14,23 @@ public class StateManager : MonoBehaviour
 	[SerializeField] PostProcessVolume postProcessVolume;
 	[SerializeField] GameObject presentObjectsParent;
 	[SerializeField] GameObject pastObjectsParent;
+
 	List<GameObject> presentObjects = new List<GameObject>();
 	List<GameObject> pastObjects = new List<GameObject>();
 
-	private void Awake()
+    private void OnEnable()
+    {
+        PressurePlate.onStateSwitch += SwitchState;
+        PressurePlate.onStateSwitch += LoadState;
+    }
+
+    private void OnDisable()
+    {
+        PressurePlate.onStateSwitch -= SwitchState;
+        PressurePlate.onStateSwitch -= LoadState;
+    }
+
+    private void Awake()
 	{
 		foreach (Transform child in presentObjectsParent.transform)
 		{
@@ -30,33 +43,54 @@ public class StateManager : MonoBehaviour
 		}
 	}
 
-	private void Update()
+    private void Start()
+    {
+        LoadState();
+    }
+
+    private void Update()
 	{
-		if (currentState == State.present)
-		{
-			// mustavalkoinen pois p‰‰lt‰
-			postProcessVolume.enabled = false;
-			foreach (GameObject presentObject in presentObjects)
-			{
-				presentObject.SetActive(true);
-			}
-			foreach (GameObject pastObject in pastObjects)
-			{
-				pastObject.SetActive(false);
-			}
-		}
-		else
-		{
-			//mustavalkoinen p‰‰lle
-			postProcessVolume.enabled = true;
-			foreach (GameObject presentObject in presentObjects)
-			{
-				presentObject.SetActive(false);
-			}
-			foreach (GameObject pastObject in pastObjects)
-			{
-				pastObject.SetActive(true);
-			}
-		}
+        //SwitchState();
 	}
+
+	public void SwitchState()
+	{
+        if (currentState == State.present)
+        {
+            currentState = State.past;
+        }
+        else
+        {
+            currentState = State.present;
+        }
+    }
+    public void LoadState()
+    {
+        if (currentState == State.present)
+        {
+            // mustavalkoinen pois p‰‰lt‰
+            postProcessVolume.enabled = false;
+            foreach (GameObject presentObject in presentObjects)
+            {
+                presentObject.SetActive(true);
+            }
+            foreach (GameObject pastObject in pastObjects)
+            {
+                pastObject.SetActive(false);
+            }
+        }
+        else
+        {
+            //mustavalkoinen p‰‰lles
+            postProcessVolume.enabled = true;
+            foreach (GameObject presentObject in presentObjects)
+            {
+                presentObject.SetActive(false);
+            }
+            foreach (GameObject pastObject in pastObjects)
+            {
+                pastObject.SetActive(true);
+            }
+        }
+    }
 }

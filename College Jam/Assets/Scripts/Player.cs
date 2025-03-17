@@ -14,7 +14,12 @@ public class Player : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 	}
 
-	void Update()
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void Update()
 	{
 		Movement();
 	}
