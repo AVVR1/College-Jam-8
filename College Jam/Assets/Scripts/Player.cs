@@ -13,12 +13,13 @@ public class Player : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody>();
 	}
-	void Start()
-    {
-        
-    }
 
 	void Update()
+	{
+		Movement();
+	}
+
+	private void Movement()
 	{
 		//WASD or arrow key inputs into vector values
 		float horizontal = Input.GetAxis("Horizontal");
