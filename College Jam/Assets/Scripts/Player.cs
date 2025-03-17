@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
 			//move player
 			moveDirForward.y = 0f;
 			moveDirRight.y = 0f;
-			rb.velocity = (moveDirRight.normalized * horizontal + moveDirForward.normalized * vertical) * moveSpeed * sprintMultiplier;
+			rb.velocity = (moveDirRight.normalized * horizontal + moveDirForward.normalized * vertical) * moveSpeed * sprintMultiplier + Vector3.up * rb.velocity.y;
 		}
 	}
 }
