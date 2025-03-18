@@ -11,13 +11,14 @@ public class StateManager : MonoBehaviour
 	public State currentState = State.present;
 
 	[Header("Variables")]
+	public GameObject presentObjectsParent;
+	public GameObject pastObjectsParent;
+    public GameObject bothObjectsParent;
 	[SerializeField] PostProcessVolume postProcessVolume;
     [SerializeField] GameObject skeleton;
-	[SerializeField] GameObject presentObjectsParent;
-	[SerializeField] GameObject pastObjectsParent;
 
-	List<GameObject> presentObjects = new List<GameObject>();
-	List<GameObject> pastObjects = new List<GameObject>();
+	public List<GameObject> presentObjects = new List<GameObject>();
+	public List<GameObject> pastObjects = new List<GameObject>();
 
     GameObject currentSkeleton;
 
