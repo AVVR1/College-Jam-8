@@ -1,6 +1,7 @@
 using Cinemachine.PostFX;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -14,6 +15,11 @@ public class StateManager : MonoBehaviour
 	public GameObject presentObjectsParent;
 	public GameObject pastObjectsParent;
     public GameObject bothObjectsParent;
+    AudioSource grandpaStepsSource;
+    AudioSource grandpaAudioSource;
+    [SerializeField] GameObject grandpa;
+    [SerializeField] AudioClip grandpaAudio;
+    [SerializeField] AudioClip grandpaSteps;
 	[SerializeField] PostProcessVolume postProcessVolume;
     [SerializeField] GameObject skeleton;
 
@@ -36,8 +42,11 @@ public class StateManager : MonoBehaviour
 
     private void Awake()
 	{
-        //currentSkeleton = GameObject.Find("Skeleton");
         CreateLists();
+        
+        AudioSource[] audioSources = grandpa.GetComponents<AudioSource>();
+        grandpaStepsSource = audioSources[0];
+        grandpaAudioSource = audioSources[1];
 	}
 
     private void Start()
@@ -97,11 +106,28 @@ public class StateManager : MonoBehaviour
             {
                 pastObject.SetActive(true);
             }
+            grandpaAudioSource.clip = grandpaAudio;
+            grandpaStepsSource.clip = grandpaSteps;
+            grandpaAudioSource.Play();
+            grandpaStepsSource.Play();
         }
     }
     private void SpawnSkeleton()
     {
         GameObject newSkeleton = Instantiate(skeleton);
         currentSkeleton = newSkeleton;
+    }
+
+    private IEnumerator LoopSound(AudioClip clip)
+    {
+        while (currentState == State.past)
+        {
+            if (!grandpaAudioSource.isPlaying)
+            {
+                print("PLAY CLIP");
+                grandpaAudioSource.PlayOneShot(clip);
+                yield return new WaitForSeconds(clip.length);
+            }
+        }
     }
 }
