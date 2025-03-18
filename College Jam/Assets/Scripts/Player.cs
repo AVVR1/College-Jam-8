@@ -10,7 +10,10 @@ public class Player : MonoBehaviour
 
 	[SerializeField] Camera cam;
 
-	Rigidbody rb;
+	[SerializeField] AudioClip clickSound;
+	[SerializeField] AudioSource generalSource;
+
+    Rigidbody rb;
 
 	public int selectedKeyID = -1;
 
@@ -130,6 +133,7 @@ public class Player : MonoBehaviour
 			{
 				if (rayCollider.CompareTag("Key"))
 				{
+					generalSource.PlayOneShot(clickSound);
 					if (selectedKeyID == -1)
 					{
 						PickupKey(rayCollider);
@@ -142,7 +146,8 @@ public class Player : MonoBehaviour
 				}
 				else if (rayCollider.CompareTag("Lock"))
 				{
-					Interact(rayCollider);
+                    generalSource.PlayOneShot(clickSound);
+                    Interact(rayCollider);
 				}
 			}
 		}
