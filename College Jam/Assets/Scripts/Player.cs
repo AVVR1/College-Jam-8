@@ -98,8 +98,6 @@ public class Player : MonoBehaviour
 	{
 		if (selectedKeyID == rayCollider.GetComponent<Lock>().ID)
 		{
-			print($"Open door {rayCollider.GetComponent<Lock>().ID}");
-
 			//find door with correct ID
 			GameObject[] objects = GameObject.FindGameObjectsWithTag("Door");
 			foreach (GameObject obj in objects)
