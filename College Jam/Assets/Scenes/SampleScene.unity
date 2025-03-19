@@ -4533,8 +4533,12 @@ PrefabInstance:
       value: "py\xF6r\xE4tuoli"
       objectReference: {fileID: 0}
     - target: {fileID: 6194039952403257305, guid: 1a86643c7435e2444b82088a88005f55, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.53605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194039952403257305, guid: 1a86643c7435e2444b82088a88005f55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3396988
+      value: 3.3037
       objectReference: {fileID: 0}
     - target: {fileID: 6194039952403257305, guid: 1a86643c7435e2444b82088a88005f55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5152,8 +5156,12 @@ PrefabInstance:
       value: "jamp\xF6yt\xE4"
       objectReference: {fileID: 0}
     - target: {fileID: 7705569619010137966, guid: 8e2dab72e6beb4e4aa243464238cf071, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.87649
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705569619010137966, guid: 8e2dab72e6beb4e4aa243464238cf071, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0000012
+      value: -1.8459
       objectReference: {fileID: 0}
     - target: {fileID: 7705569619010137966, guid: 8e2dab72e6beb4e4aa243464238cf071, type: 3}
       propertyPath: m_LocalPosition.y
