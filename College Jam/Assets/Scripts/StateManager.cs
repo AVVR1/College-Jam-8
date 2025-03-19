@@ -86,11 +86,17 @@ public class StateManager : MonoBehaviour
             SpawnSkeleton();
             foreach (GameObject presentObject in presentObjects)
             {
-                presentObject.SetActive(true);
+                if (presentObject != null)
+                {
+                    presentObject.SetActive(true);
+                }
             }
             foreach (GameObject pastObject in pastObjects)
             {
-                pastObject.SetActive(false);
+                if (pastObject != null)
+                {
+                    pastObject.SetActive(false);
+                }
             }
         }
         else
@@ -116,18 +122,5 @@ public class StateManager : MonoBehaviour
     {
         GameObject newSkeleton = Instantiate(skeleton);
         currentSkeleton = newSkeleton;
-    }
-
-    private IEnumerator LoopSound(AudioClip clip)
-    {
-        while (currentState == State.past)
-        {
-            if (!grandpaAudioSource.isPlaying)
-            {
-                print("PLAY CLIP");
-                grandpaAudioSource.PlayOneShot(clip);
-                yield return new WaitForSeconds(clip.length);
-            }
-        }
     }
 }

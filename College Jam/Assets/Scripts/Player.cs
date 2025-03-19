@@ -116,6 +116,7 @@ public class Player : MonoBehaviour
 					List<GameObject> list = GetStateObjectsList(door.state);
 					list.Remove(target);
 					//destroy key
+					selectedKeyID = -1;
 					Destroy(transform.GetChild(0).gameObject);
 					
 					break;
@@ -157,7 +158,7 @@ public class Player : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
-			if (transform.GetChild(0) != null)
+			if (selectedKeyID != -1)
 			{
 				DropKey();
 			}
