@@ -90,20 +90,12 @@ public class StateManager : MonoBehaviour
                 {
                     presentObject.SetActive(true);
                 }
-                else
-                {
-                    print(presentObject.name);
-                }
             }
             foreach (GameObject pastObject in pastObjects)
             {
                 if (pastObject != null)
                 {
                     pastObject.SetActive(false);
-                }
-                else
-                {
-                    print(pastObject.name);
                 }
             }
         }
