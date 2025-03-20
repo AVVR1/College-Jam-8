@@ -1155,10 +1155,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: sohva (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7136,10 +7132,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: sohva (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7337,10 +7329,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
       propertyPath: m_Name
       value: sohva (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9203,10 +9191,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
       propertyPath: m_Name
       value: sohva (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12307,10 +12291,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: sohva (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12751,10 +12731,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
       propertyPath: m_Name
       value: sohva (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14528,10 +14504,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
       propertyPath: m_Name
       value: sohva
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22662,10 +22634,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: sohva (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24027,10 +23995,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
       propertyPath: m_Name
       value: sohva (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1edf4edc1bdf42a4182a22c28f507b1f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
