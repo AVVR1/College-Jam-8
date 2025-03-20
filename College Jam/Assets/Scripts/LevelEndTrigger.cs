@@ -8,6 +8,7 @@ public class LevelEndTrigger : MonoBehaviour
 	[SerializeField] GameObject levelEndPanel;
 	private void OnTriggerEnter(Collider other)
 	{
+		Cursor.lockState = CursorLockMode.None;
 		levelEndPanel.SetActive(true);
 		StartCoroutine(LoadMainMenu());
 	}
