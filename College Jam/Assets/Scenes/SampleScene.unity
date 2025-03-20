@@ -10926,7 +10926,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7360832864631305706, guid: 44486f78264f72b449ffd90d31360792, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.75
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7360832864631305706, guid: 44486f78264f72b449ffd90d31360792, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17727,8 +17727,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1086676924534188559, guid: 8e2dab72e6beb4e4aa243464238cf071, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e2dab72e6beb4e4aa243464238cf071, type: 3}
@@ -29443,6 +29442,14 @@ PrefabInstance:
     - target: {fileID: 5426769285146467179, guid: 865dfe3dd7837c149a2d00e96bccea58, type: 3}
       propertyPath: m_Name
       value: FuturisticDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426769285146467179, guid: 865dfe3dd7837c149a2d00e96bccea58, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426769285146467179, guid: 865dfe3dd7837c149a2d00e96bccea58, type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 7889164115528964724, guid: 865dfe3dd7837c149a2d00e96bccea58, type: 3}
       propertyPath: m_LocalPosition.x
