@@ -7761,7 +7761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4f7f42cd02cc840a92df350e5c6490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 5
   cam: {fileID: 963194227}
   clickSound: {fileID: 8300000, guid: 46c1008f45ebc06428645fa2257ff002, type: 3}
   generalSource: {fileID: 963194232}
@@ -7773,7 +7773,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617249581}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a05bd13592fd594469ea9b06a20cfa7c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
