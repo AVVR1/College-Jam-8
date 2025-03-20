@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
 		Movement();
 		MouseInput();
 		DropInput();
+		SyncRotation();
 	}
 
 	private void Movement()
@@ -82,7 +83,7 @@ public class Player : MonoBehaviour
 		List<GameObject> list = GetStateObjectsList(rayCollider.GetComponent<Key>().state);
 		list.Remove(rayCollider.gameObject);
 		rayCollider.GetComponent<Rigidbody>().isKinematic = true;
-		rayCollider.transform.localPosition = new Vector3(0, 0.3f, 1);
+		rayCollider.transform.localPosition = new Vector3(0, 0, 1);
 	}
 
 	private void DropKey()
@@ -187,5 +188,10 @@ public class Player : MonoBehaviour
 			return statemanager.pastObjects;
 		}
 		return null;
+	}
+
+	private void SyncRotation()
+	{
+		transform.rotation = Quaternion.Euler(0,cam.transform.rotation.eulerAngles.y,0);
 	}
 }
