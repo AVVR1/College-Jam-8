@@ -100,6 +100,7 @@ public class StateManager : MonoBehaviour
                     pastObject.SetActive(false);
                 }
             }
+            musicAudioSource.Pause();
         }
         else
         {
