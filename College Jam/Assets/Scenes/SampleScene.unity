@@ -9421,7 +9421,7 @@ MonoBehaviour:
   grandpaAudio: {fileID: 8300000, guid: f42c1c5963d4fec4a8f8b9cf235cfad3, type: 3}
   grandpaSteps: {fileID: 8300000, guid: 10978cc21945ad142b6284a722f9669b, type: 3}
   postProcessVolume: {fileID: 963194230}
-  skeleton: {fileID: 8395253485831648510, guid: 7173006c7d9dd4846aaa709959c26482, type: 3}
+  skeleton: {fileID: 3997615270029564903, guid: 8d7e85eb93d34ef4b98a16abe4930123, type: 3}
   presentObjects: []
   pastObjects: []
 --- !u!4 &705205719
