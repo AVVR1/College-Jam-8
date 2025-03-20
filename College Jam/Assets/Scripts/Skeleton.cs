@@ -8,6 +8,5 @@ public class Skeleton : MonoBehaviour
     {
         GameObject grandpa = GameObject.Find("Grandpa");
         transform.position = grandpa.transform.position - Vector3.up;
-        transform.rotation = grandpa.transform.rotation;
     }
 }
