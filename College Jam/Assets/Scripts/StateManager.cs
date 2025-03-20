@@ -17,9 +17,11 @@ public class StateManager : MonoBehaviour
     public GameObject bothObjectsParent;
     AudioSource grandpaStepsSource;
     AudioSource grandpaAudioSource;
+    [SerializeField] AudioSource musicAudioSource;
     [SerializeField] GameObject grandpa;
     [SerializeField] AudioClip grandpaAudio;
     [SerializeField] AudioClip grandpaSteps;
+    [SerializeField] AudioClip ambient;
 	[SerializeField] PostProcessVolume postProcessVolume;
     [SerializeField] GameObject skeleton;
 
@@ -116,6 +118,9 @@ public class StateManager : MonoBehaviour
             grandpaStepsSource.clip = grandpaSteps;
             grandpaAudioSource.Play();
             grandpaStepsSource.Play();
+
+            musicAudioSource.clip = ambient;
+            musicAudioSource.Play();
         }
     }
     private void SpawnSkeleton()

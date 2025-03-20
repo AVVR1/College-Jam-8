@@ -9450,9 +9450,11 @@ MonoBehaviour:
   presentObjectsParent: {fileID: 2080291724}
   pastObjectsParent: {fileID: 1353250526}
   bothObjectsParent: {fileID: 1624344253}
+  musicAudioSource: {fileID: 963194232}
   grandpa: {fileID: 1372733256}
   grandpaAudio: {fileID: 8300000, guid: f42c1c5963d4fec4a8f8b9cf235cfad3, type: 3}
   grandpaSteps: {fileID: 8300000, guid: 10978cc21945ad142b6284a722f9669b, type: 3}
+  ambient: {fileID: 8300000, guid: b6577d611cc620f4db55bd1ca0b44ab0, type: 3}
   postProcessVolume: {fileID: 963194230}
   skeleton: {fileID: 3997615270029564903, guid: 8d7e85eb93d34ef4b98a16abe4930123, type: 3}
   presentObjects: []
