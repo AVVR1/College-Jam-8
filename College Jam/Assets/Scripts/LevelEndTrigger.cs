@@ -8,7 +8,7 @@ public class LevelEndTrigger : MonoBehaviour
 	[SerializeField] GameObject levelEndPanel;
 	private void OnTriggerEnter(Collider other)
 	{
-		levelEndPanel.SetActive(false);
+		levelEndPanel.SetActive(true);
 		StartCoroutine(LoadMainMenu());
 	}
 
